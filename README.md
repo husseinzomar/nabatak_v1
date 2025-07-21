@@ -1,16 +1,14 @@
-# nabatak_v1
+Nabatak – Plant Selling App
+A mobile application developed using Flutter that allows users in Cairo to browse and purchase decorative plants online. The app features:
 
-A new Flutter project.
+A clean, modern green-and-white user interface
 
-## Getting Started
+Plant catalog with images and descriptions
 
-This project is a starting point for a Flutter application.
+Filtering and search functionality
 
-A few resources to get you started if this is your first Flutter project:
+Shopping cart and order placement
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Designed to promote learning and personal income growth
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project reflects a combination of practical business goals and skill development in mobile app development.
