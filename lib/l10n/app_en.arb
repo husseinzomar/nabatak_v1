@@ -4,5 +4,15 @@
           "settingsTitle": "Settings",
           "language": "Language",
           "choosePlantType": "Welcome, choose the type of plant that suits you 🌱",
-          "plantName": "Plant Name"
+          "plantName": "Plant Name",
+          "searchHint": "Search for a plant",
+          "specialOffersTitle": "Special Offers",
+          "categoriesTitle": "Categories",
+          "ornamentalPlants": "Ornamental Plants",
+          "indoorPlants": "Indoor Plants",
+          "outdoorPlants": "Outdoor Plants",
+          "cacti": "Cacti",
+          "newProductsTitle": "New Products",
+          "clearButtonTooltip": "Clear",
+          "backButtonTooltip": "Back"
         }

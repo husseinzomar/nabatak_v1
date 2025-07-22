@@ -4,5 +4,15 @@
           "settingsTitle": "الإعدادات",
           "language": "اللغة",
           "choosePlantType": "مرحبًا، اختار نوع النبات اللي يناسبك 🌱",
-          "plantName": "اسم النبتة"
+          "plantName": "اسم النبتة",
+          "searchHint": "ابحث عن نبتة",
+          "specialOffersTitle": "عروض مميزة",
+          "categoriesTitle": "التصنيفات",
+          "ornamentalPlants": "نباتات زينة",
+          "indoorPlants": "نباتات داخلية",
+          "outdoorPlants": "نباتات خارجية",
+          "cacti": "صباريات",
+          "newProductsTitle": "منتجات جديدة",
+          "clearButtonTooltip": "مسح",
+          "backButtonTooltip": "رجوع"
         }
