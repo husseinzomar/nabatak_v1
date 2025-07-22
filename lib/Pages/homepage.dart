@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white, // Or Colors.green[50] for a light green
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        elevation: 0,
+        elevation: 50,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
