@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nabatak_v1/Pages/homepage.dart';
 import 'package:nabatak_v1/Pages/settings_page.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:provider/provider.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -29,18 +32,14 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ), // TODO: Replace with appropriate icons and localize labels
-            label: 'Home',
+            icon: Icon(Icons.home),
+            label: AppLocalizations.of(context).home, // Localized label
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.settings,
-            ), // TODO: Replace with appropriate icons and localize labels
-            label: 'Settings',
+            icon: Icon(Icons.settings),
+            label: AppLocalizations.of(context).settingsTitle, // Localized label
           ),
           // Add other BottomNavigationBarItem widgets here
         ],
