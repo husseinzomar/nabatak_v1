@@ -23,4 +23,34 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get plantName => 'Plant Name';
+
+  @override
+  String get searchHint => 'Search for a plant';
+
+  @override
+  String get specialOffersTitle => 'Special Offers';
+
+  @override
+  String get categoriesTitle => 'Categories';
+
+  @override
+  String get ornamentalPlants => 'Ornamental Plants';
+
+  @override
+  String get indoorPlants => 'Indoor Plants';
+
+  @override
+  String get outdoorPlants => 'Outdoor Plants';
+
+  @override
+  String get cacti => 'Cacti';
+
+  @override
+  String get newProductsTitle => 'New Products';
+
+  @override
+  String get clearButtonTooltip => 'Clear';
+
+  @override
+  String get backButtonTooltip => 'Back';
 }

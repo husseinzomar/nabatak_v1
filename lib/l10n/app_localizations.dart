@@ -127,6 +127,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Plant Name'**
   String get plantName;
+
+  /// No description provided for @searchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search for a plant'**
+  String get searchHint;
+
+  /// No description provided for @specialOffersTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Special Offers'**
+  String get specialOffersTitle;
+
+  /// No description provided for @categoriesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Categories'**
+  String get categoriesTitle;
+
+  /// No description provided for @ornamentalPlants.
+  ///
+  /// In en, this message translates to:
+  /// **'Ornamental Plants'**
+  String get ornamentalPlants;
+
+  /// No description provided for @indoorPlants.
+  ///
+  /// In en, this message translates to:
+  /// **'Indoor Plants'**
+  String get indoorPlants;
+
+  /// No description provided for @outdoorPlants.
+  ///
+  /// In en, this message translates to:
+  /// **'Outdoor Plants'**
+  String get outdoorPlants;
+
+  /// No description provided for @cacti.
+  ///
+  /// In en, this message translates to:
+  /// **'Cacti'**
+  String get cacti;
+
+  /// No description provided for @newProductsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'New Products'**
+  String get newProductsTitle;
+
+  /// No description provided for @clearButtonTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clearButtonTooltip;
+
+  /// No description provided for @backButtonTooltip.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get backButtonTooltip;
 }
 
 class _AppLocalizationsDelegate

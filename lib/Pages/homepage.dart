@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nabatak_v1/l10n/app_localizations.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -33,7 +34,9 @@ class HomePage extends StatelessWidget {
                         SizedBox(width: 8),
                         Expanded(
                           child: Text(
-                            'ابحث عن نبتة',
+                            AppLocalizations.of(
+                              context,
+                            )!.searchHint, // استخدم الترجمة هنا
                             style: TextStyle(
                               color: Colors.grey[700],
                               fontSize: 18,
@@ -65,7 +68,9 @@ class HomePage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'عروض مميزة',
+                                AppLocalizations.of(
+                                  context,
+                                )!.specialOffersTitle,
                                 style: TextStyle(
                                   color: Colors.green[800],
                                   fontSize: 28,
@@ -89,7 +94,7 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  'التصنيفات',
+                  AppLocalizations.of(context)!.categoriesTitle,
                   style: TextStyle(
                     color: Colors.green[800],
                     fontSize: 22,
@@ -101,14 +106,35 @@ class HomePage extends StatelessWidget {
               SizedBox(height: 12),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    _CategoryItem('assets/plant2.jpeg', 'نباتات زينة'),
-                    _CategoryItem('assets/plant3.jpeg', 'نباتات داخلية'),
-                    _CategoryItem('assets/plant4.jpeg', 'نباتات خارجية'),
-                    _CategoryItem('assets/plant5.jpeg', 'صباريات'),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: SizedBox(
+                    height: 100, // ارتفاع العنصر
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        _CategoryItem(
+                          'assets/plant2.jpeg',
+                          AppLocalizations.of(context)!.ornamentalPlants,
+                        ),
+                        SizedBox(width: 16),
+                        _CategoryItem(
+                          'assets/plant3.jpeg',
+                          AppLocalizations.of(context)!.indoorPlants,
+                        ),
+                        SizedBox(width: 16),
+                        _CategoryItem(
+                          'assets/plant4.jpeg',
+                          AppLocalizations.of(context)!.outdoorPlants,
+                        ),
+                        SizedBox(width: 16),
+                        _CategoryItem(
+                          'assets/plant5.jpeg',
+                          AppLocalizations.of(context)!.cacti,
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
               SizedBox(height: 24),
@@ -116,7 +142,7 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  'منتجات جديدة',
+                  AppLocalizations.of(context)!.newProductsTitle,
                   style: TextStyle(
                     color: Colors.green[800],
                     fontSize: 22,
@@ -166,6 +192,7 @@ class _CategoryItem extends StatelessWidget {
           style: TextStyle(
             color: Colors.green[800],
             fontWeight: FontWeight.bold,
+            fontSize: 14,
           ),
         ),
       ],
@@ -192,15 +219,6 @@ class _ProductItem extends StatelessWidget {
 }
 
 class PlantSearchDelegate extends SearchDelegate<String> {
-  final List<String> plantNames = [
-    'نباتات زينة',
-    'نباتات داخلية',
-    'نباتات خارجية',
-    'صباريات',
-    'منتجات جديدة',
-    // أضف المزيد حسب الحاجة
-  ];
-
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [IconButton(icon: Icon(Icons.clear), onPressed: () => query = '')];
@@ -216,6 +234,13 @@ class PlantSearchDelegate extends SearchDelegate<String> {
 
   @override
   Widget buildResults(BuildContext context) {
+    final plantNames = [
+      AppLocalizations.of(context)!.ornamentalPlants,
+      AppLocalizations.of(context)!.indoorPlants,
+      AppLocalizations.of(context)!.outdoorPlants,
+      AppLocalizations.of(context)!.cacti,
+      AppLocalizations.of(context)!.newProductsTitle,
+    ];
     final results = plantNames.where((name) => name.contains(query)).toList();
     return ListView.builder(
       itemCount: results.length,
@@ -228,6 +253,13 @@ class PlantSearchDelegate extends SearchDelegate<String> {
 
   @override
   Widget buildSuggestions(BuildContext context) {
+    final plantNames = [
+      AppLocalizations.of(context)!.ornamentalPlants,
+      AppLocalizations.of(context)!.indoorPlants,
+      AppLocalizations.of(context)!.outdoorPlants,
+      AppLocalizations.of(context)!.cacti,
+      AppLocalizations.of(context)!.newProductsTitle,
+    ];
     final suggestions = plantNames
         .where((name) => name.contains(query))
         .toList();
