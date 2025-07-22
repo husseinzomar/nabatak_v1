@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
     'نباتات خارجية',
     'زهور',
     'مزهريات',
-    'الأكثر مبيعًا'
+    'الأكثر مبيعًا',
   ];
   String selectedCategory = 'الكل';
 
@@ -26,8 +26,9 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white, // Or Colors.green[50] for a light green
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        elevation: 0,
+        elevation: 50,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // TODO: Replace with your app logo
             Icon(Icons.eco, color: Colors.green),
@@ -38,16 +39,21 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.green,
                 fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
+        leading: IconButton(
+          icon: Icon(Icons.search, color: Colors.green),
+          onPressed: () async {
+            final String? result = await showSearch(
+              context: context,
+              delegate: PlantSearchDelegate(),
+            );
+          },
+        ),
+        // centerTitle: true,
         actions: [
-          IconButton(
-            icon: Icon(Icons.search, color: Colors.green),
-            onPressed: () {
-              // TODO: Implement search functionality
-            },
-          ),
           Stack(
             children: [
               IconButton(
@@ -66,16 +72,10 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    constraints: BoxConstraints(
-                      minWidth: 16,
-                      minHeight: 16,
-                    ),
+                    constraints: BoxConstraints(minWidth: 16, minHeight: 16),
                     child: Text(
                       '$cartItemCount',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 10,
-                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 10),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -191,9 +191,7 @@ class PlantItemPlaceholder extends StatelessWidget {
             child: Text(
               'اسم النبتة', // Placeholder for plant name
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
@@ -219,6 +217,77 @@ class PlantItemPlaceholder extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class PlantSearchDelegate extends SearchDelegate<String> {
+  final List<String> plantNames = [
+    'صبار',
+    'نخلة',
+    'زهرة الشمس',
+    'لافندر',
+    'نعناع',
+    'ريحان',
+    // أضف المزيد من أسماء النباتات هنا
+  ];
+
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    return [
+      IconButton(
+        icon: Icon(Icons.clear),
+        onPressed: () {
+          query = '';
+        },
+      ),
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+      icon: Icon(Icons.arrow_back),
+      onPressed: () {
+        close(context, '');
+      },
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    final results = plantNames.where((name) => name.contains(query)).toList();
+
+    return ListView.builder(
+      itemCount: results.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(results[index]),
+          onTap: () {
+            close(context, results[index]);
+          },
+        );
+      },
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final suggestions = plantNames
+        .where((name) => name.contains(query))
+        .toList();
+
+    return ListView.builder(
+      itemCount: suggestions.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(suggestions[index]),
+          onTap: () {
+            query = suggestions[index];
+            showResults(context);
+          },
+        );
+      },
     );
   }
 }
