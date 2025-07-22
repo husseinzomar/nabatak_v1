@@ -5,7 +5,8 @@ import 'package:provider/provider.dart';
 import 'package:nabatak_v1/Pages/splash_screen.dart'; // Import SplashScreen
 import 'package:shared_preferences/shared_preferences.dart'; // Import shared_preferences
 
-void main() async { // Make main async to use await
+void main() async {
+  // Make main async to use await
   WidgetsFlutterBinding.ensureInitialized(); // Ensure Flutter binding is initialized
   runApp(const MyApp());
 }
@@ -47,6 +48,7 @@ class MyApp extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           debugShowCheckedModeBanner: false, // Hide debug banner
+
           home: SplashScreen(), // Set SplashScreen as the initial screen
         );
       },

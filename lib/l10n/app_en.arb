@@ -14,5 +14,6 @@
           "cacti": "Cacti",
           "newProductsTitle": "New Products",
           "clearButtonTooltip": "Clear",
-          "backButtonTooltip": "Back"
+          "backButtonTooltip": "Back",
+          "firstPage": "Home"
         }

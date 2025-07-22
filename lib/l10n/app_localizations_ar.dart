@@ -52,4 +52,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get backButtonTooltip => 'رجوع';
+
+  @override
+  String get firstPage => 'الرئيسية';
 }

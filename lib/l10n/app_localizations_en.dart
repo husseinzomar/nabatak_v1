@@ -53,4 +53,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backButtonTooltip => 'Back';
+
+  @override
+  String get firstPage => 'Home';
 }

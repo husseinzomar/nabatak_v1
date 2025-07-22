@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nabatak_v1/Pages/homepage.dart';
 import 'package:nabatak_v1/Pages/settings_page.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:nabatak_v1/l10n/app_localizations.dart';
 
 import 'package:provider/provider.dart';
 
@@ -35,11 +35,13 @@ class _MainScreenState extends State<MainScreen> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: AppLocalizations.of(context).home, // Localized label
+            label: AppLocalizations.of(context)!.firstPage, // Localized label
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            label: AppLocalizations.of(context).settingsTitle, // Localized label
+            label: AppLocalizations.of(
+              context,
+            )!.settingsTitle, // Localized label
           ),
           // Add other BottomNavigationBarItem widgets here
         ],

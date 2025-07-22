@@ -187,6 +187,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Back'**
   String get backButtonTooltip;
+
+  /// No description provided for @firstPage.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get firstPage;
 }
 
 class _AppLocalizationsDelegate
