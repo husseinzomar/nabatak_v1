@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nabatak_v1/l10n/app_localizations.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             Icon(Icons.eco, color: Colors.green),
             SizedBox(width: 8),
             Text(
-              'نباتك',
+              AppLocalizations.of(context)!.appTitle,
               style: TextStyle(
                 color: Colors.green,
                 fontWeight: FontWeight.bold,
