@@ -16,4 +16,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get language => 'اللغة';
+
+  @override
+  String get choosePlantType => 'مرحبًا، اختار نوع النبات اللي يناسبك 🌱';
+
+  @override
+  String get plantName => 'اسم النبتة';
 }

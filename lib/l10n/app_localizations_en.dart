@@ -16,4 +16,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get language => 'Language';
+
+  @override
+  String get choosePlantType =>
+      'Welcome, choose the type of plant that suits you 🌱';
+
+  @override
+  String get plantName => 'Plant Name';
 }

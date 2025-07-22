@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nabatak_v1/Pages/homepage.dart';
+import 'package:nabatak_v1/Pages/bottomNavigationBar.dart';
 import 'package:nabatak_v1/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           debugShowCheckedModeBanner: false, // Hide debug banner
-          home: HomePage(), // Set HomePage as the initial screen
+          home: MainScreen(), // Set MainScreen as the initial screen
         );
       },
     );

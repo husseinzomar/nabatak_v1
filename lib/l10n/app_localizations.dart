@@ -115,6 +115,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Language'**
   String get language;
+
+  /// No description provided for @choosePlantType.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome, choose the type of plant that suits you 🌱'**
+  String get choosePlantType;
+
+  /// No description provided for @plantName.
+  ///
+  /// In en, this message translates to:
+  /// **'Plant Name'**
+  String get plantName;
 }
 
 class _AppLocalizationsDelegate

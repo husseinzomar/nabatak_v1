@@ -2,5 +2,7 @@
           "@@locale": "en",
           "appTitle": "Nabatk",
           "settingsTitle": "Settings",
-          "language": "Language"
+          "language": "Language",
+          "choosePlantType": "Welcome, choose the type of plant that suits you 🌱",
+          "plantName": "Plant Name"
         }
