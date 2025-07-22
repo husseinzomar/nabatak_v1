@@ -10,4 +10,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get appTitle => 'نباتك';
+
+  @override
+  String get settingsTitle => 'الإعدادات';
+
+  @override
+  String get language => 'اللغة';
 }

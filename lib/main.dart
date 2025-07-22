@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nabatak_v1/Pages/homepage.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:nabatak_v1/l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -53,8 +53,5 @@ class MyApp extends StatelessWidget {
 
 // Add a list of supported locales for the LocaleProvider
 class L10n {
-  static final all = [
-    const Locale('en'),
-    const Locale('ar'),
-  ];
+  static final all = [const Locale('en'), const Locale('ar')];
 }
