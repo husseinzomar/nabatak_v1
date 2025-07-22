@@ -1,4 +1,6 @@
 {
-      "@@locale": "en",
-      "appTitle": "Nabatak"
-    }
+          "@@locale": "en",
+          "appTitle": "Nabatk",
+          "settingsTitle": "Settings",
+          "language": "Language"
+        }

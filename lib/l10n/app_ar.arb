@@ -1,4 +1,6 @@
 {
-      "@@locale": "ar",
-      "appTitle": "نباتك"
-    }
+          "@@locale": "ar",
+          "appTitle": "نباتك",
+          "settingsTitle": "الإعدادات",
+          "language": "اللغة"
+        }
