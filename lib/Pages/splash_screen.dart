@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
     final prefs = await SharedPreferences.getInstance();
     final isFirstLaunch = prefs.getBool('isFirstLaunch') ?? true;
 
-    if (!mounted) return; // تحقق أن الـ State ما زال فعالاً
+    if (!mounted) return;
 
     if (isFirstLaunch) {
       Navigator.of(context).pushReplacement(
